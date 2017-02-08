@@ -1,0 +1,7 @@
+$color-pre : '#';
+$color : fff,cac,fdd92b,a2a8de;
+@each $c in $color{
+    .color-#{$c}{
+        color: str-insert($c, $color-pre, 1);
+    }
+} 

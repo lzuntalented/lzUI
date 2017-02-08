@@ -1,0 +1,14 @@
+
+$float-list : left,right;
+@each $f in $float-list{
+    .float-#{$f}{
+        float: $f;
+    }
+}
+
+$clear-list : append($float-list,both);
+@each $f in $clear-list{
+    .clear-#{$f}{
+        clear: $f;
+    }
+}

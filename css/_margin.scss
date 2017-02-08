@@ -1,0 +1,30 @@
+$margin-max : 50;
+@for $i from 1 through 16{
+    $i : $i * 5;
+    .margin{
+        margin: #{$i}px;
+    }
+    
+    .margin-t-#{$i}{
+        margin-top: #{$i}px;
+    }
+    .margin-b-#{$i}{
+        margin-bottom: #{$i}px;
+    }
+    .margin-l-#{$i}{
+        margin-left: #{$i}px;
+    }
+    .margin-r-#{$i}{
+        margin-right: #{$i}px;
+    }
+    
+    .margin-tb-#{$i}{
+        margin-top: #{$i}px;
+        margin-bottom: #{$i}px;
+    }
+    .margin-lr-#{$i}{
+        margin-right: #{$i}px;
+        margin-left: #{$i}px;
+    }
+    
+}

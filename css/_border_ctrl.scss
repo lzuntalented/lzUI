@@ -1,0 +1,94 @@
+@mixin border-line{
+    position: absolute;
+    background-color: #44cb83;
+    height: 1px;
+    width: 1px;
+}
+@mixin border-point($left:0px,$top:0px){
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: 1px solid #44cb83;
+    width: 12px;
+    height: 12px;
+    left: -webkit-calc(#{$left} - 7px);
+    left: -moz-calc(#{$left} - 7px);
+    left: calc(#{$left} - 7px);
+    
+    top: -webkit-calc(#{$top} - 7px);
+    top: -moz-calc(#{$top} - 7px);
+    top: calc(#{$top} - 7px);
+} 
+.border-ctrl-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .bar-point{
+        background-color: #44cb83;
+        top: -30px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        left: 50%;
+        margin-left: -6px;
+        position: absolute;
+    }
+    .bar-line{
+        width: 1px;
+        height: 18px;
+        top: -18px;
+        left: 50%;
+        background-color: white;
+        position: absolute;
+    }
+    .top-line{
+        @include border-line;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    .bottom-line{
+        @include border-line;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+    }
+    .left-line{
+        @include border-line;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+    }
+    .right-line{
+        @include border-line;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+    }
+    .point-lt{
+        @include border-point();
+    }
+    .point-mt{
+        @include border-point(50%);
+    }
+    .point-rt{
+        @include border-point(100%);
+    }
+    
+    .point-ml{
+        @include border-point(0px,50%);
+    }
+    .point-mr{
+        @include border-point(100%,50%);
+    }
+    
+    .point-lb{
+        @include border-point(0px,100%);
+    }
+    .point-mb{
+        @include border-point(50%,100%);
+    }
+    .point-rb{
+        @include border-point(100%,100%);
+    }
+}

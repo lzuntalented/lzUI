@@ -1,0 +1,23 @@
+//@import "color";
+$prefix: 'lz-but';
+
+.#{$prefix}{
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 4px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    
+    &-primary{
+        color: #fff;
+        background-color: #108ee9;
+        border-color: #108ee9;
+    }
+    
+    &-base{
+        color: rgba(0, 0, 0, 0.65);
+        background-color: #f7f7f7;
+        border-color: #d9d9d9;
+    }
+}

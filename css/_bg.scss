@@ -1,0 +1,7 @@
+$color-pre : '#';
+$color : fff,7f7fc1,4f58aa;
+@each $c in $color{
+    .bg-#{$c}{
+        background-color: #{'#'}$c;
+    }
+}

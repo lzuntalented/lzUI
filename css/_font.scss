@@ -1,0 +1,7 @@
+@for $i from 0 through 2{
+    @for $j from 0 through 9{
+        .f#{$i}#{$j}{
+            font-size: #{$i}#{'.'}#{$j}rem;
+        }
+    }   
+}
