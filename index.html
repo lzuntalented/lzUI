@@ -7,7 +7,15 @@
 		<link rel="stylesheet" type="text/css" href="css/button/_button.css"/>
 		<link rel="stylesheet" type="text/css" href="css/input/input.css"/>
 		<link rel="stylesheet" type="text/css" href="css/table/table.css"/>
+		<link rel="stylesheet" type="text/css" href="css/select/select.css"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_dm5ettknh15lv7vi.css"/>
+		<style type="text/css">
+			html{
+				font-size: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="lz-but">adfsad</div>
@@ -20,33 +28,66 @@
 		<input class="lz-input lz-input-base" type="" name="" id="" value="" />
 		<input class="lz-input lz-input-base lz-input-hover" type="" name="" id="" value="" />
 		
-		<div class="lz-input-group" style="width: 300px;left: 20px;">
-			<span class="iconfont icon-tubiao101 lz-input-group-addon"></span>
-			<input class="lz-input lz-input-hover lz-input-focus" type="" name="" id="" value="" />
-			<span class="lz-input-group-addon">ad</span>
-		</div>
+
+			<div class="lz-input-group" >
+				<span class="iconfont icon-tubiao101 lz-input-group-addon"></span>
+				<input class="lz-input lz-input-hover lz-input-focus" type="" name="" id="" value="" />
+				<span class="lz-input-group-addon">ad</span>
+			</div>
+			
+			<div class="lz-input-group" >
+				<input class="lz-input lz-input-hover lz-input-focus" type="" name="" id="" value="" />
+				<span class="lz-input-group-addon">ad</span>
+			</div>
+			
+			<div>
+				<table class="lz-table lz-table-line">
+					<thead>
+						<tr>
+							<th>1313</th>
+							<th>sdsfsd</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1313</td>
+							<td>sdsfsd</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
 		
-		<div class="lz-input-group" style="width: 300px;left: 20px;">
-			<input class="lz-input lz-input-hover lz-input-focus" type="" name="" id="" value="" />
-			<span class="lz-input-group-addon">ad</span>
+		<div class="lz-select" style="width: 300px;">
+			<div class="selected">
+				<div class="item">
+					1阿萨德发生
+					<span class="iconfont icon-iconfontshequyijujue"></span>
+				</div>
+			</div>
+			<ul class="draw-pop">
+				<li>
+					123
+					<div class="chose">√</div>
+				</li>
+				<li>
+					123
+					<div class="chose">√</div>
+				</li>
+				<li>
+					123
+					<div class="chose">√</div>
+				</li>
+			</ul>
 		</div>
+		<div id="show" class="lz-but lz-but-primary">show</div>
 		
-		<div>
-			<table class="lz-table lz-table-line">
-				<thead>
-					<tr>
-						<th>1313</th>
-						<th>sdsfsd</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>1313</td>
-						<td>sdsfsd</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		
+		<script src="select.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			show.addEventListener("click",function(){
+				lzMutilSelect.getValue(document.querySelectorAll(".lz-select")[0]);
+			})
+			
+		</script>
 	</body>
 </html>
